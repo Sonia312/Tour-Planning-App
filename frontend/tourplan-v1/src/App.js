@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import Header from './components/header/Header';
 
 function App() {
 
@@ -20,11 +21,13 @@ function App() {
 
   useEffect(() =>{
     getAllHotels();
+    console.log(hotels);
   }, [])
 
   return (
     <div className="App">
-      
+      <Header/>
+
     </div>
   );
 }
