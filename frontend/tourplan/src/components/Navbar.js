@@ -1,14 +1,12 @@
 import React from "react";
-import styled from "styled.component";
+import styled from "styled-components";
 
-class Navbar extends React.Component {
-  render() {
-    return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light" id="container">
-        
-        <a className="navbar-brand" href="#">
-        <i class="bi bi-airplane-fill"></i>
-          Bon Voyage
+const Navbar = () => {
+  return (
+    <NavbarContainer>
+      <nav className="navbar navbar-expand-lg">
+        <a className="navbar-brand">
+          <img src="tourplan\pictures\logo.png" alt="Bon Voyage Logo" />
         </a>
         <button
           className="navbar-toggler"
@@ -30,19 +28,35 @@ class Navbar extends React.Component {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Your Trips
+                New Trip
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                New Trip
+                Current Trip
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Past Trips
               </a>
             </li>
           </ul>
         </div>
       </nav>
-    );
+    </NavbarContainer>
+  );
+};
+
+const NavbarContainer = styled.div`
+  background-color: white;
+  nav {
+    padding: 1%;
+    padding-left: 1.5%;
   }
-}
+  .nav-item {
+    padding: 10px;
+  }
+`;
 
 export default Navbar;
