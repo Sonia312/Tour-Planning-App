@@ -6,7 +6,7 @@ const Navbar = () => {
     <NavbarContainer>
       <nav className="navbar navbar-expand-lg">
         <a className="navbar-brand">
-          <img src="tourplan\pictures\logo.png" alt="Bon Voyage Logo" />
+          <img src="./pictures/logo.png" alt="Bon Voyage Logo"/>
         </a>
         <button
           className="navbar-toggler"
